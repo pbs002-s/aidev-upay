@@ -420,6 +420,65 @@ h1, h2, h3, h4 {
   background: var(--bg-tertiary);
 }
 
+/* ============================================================
+   Real-Time FX Ticker Bar (Horizontal Scrolling Ribbon)
+   ============================================================ */
+.ticker-bar {
+  background: var(--bg-darkest, #0E0F12);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 7px 0;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 10;
+}
+
+.ticker-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  min-width: 100%;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.ticker-item strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.ticker-badge {
+  background: rgba(185, 138, 69, 0.15);
+  border: 1px solid var(--auralis-primary, #B98A45);
+  color: var(--auralis-accent, #FFE8B8);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ticker-rate-pos {
+  color: #10B981;
+  font-weight: 600;
+}
+
 /* Navigation */
 .navbar {
   position: sticky;

@@ -68,7 +68,6 @@
           <li><a href="#sandbox" class="nav-link" id="nav-sandbox">Live AI Sandbox</a></li>
           <li><a href="#engines" class="nav-link" id="nav-engines">The 4 Engines</a></li>
           <li><a href="#benchmarks" class="nav-link" id="nav-benchmarks">Benchmarks & Tracks</a></li>
-          <li><a href="#pricing" class="nav-link" id="nav-pricing">Pricing & Plans</a></li>
           <li><a href="#responsible-ai" class="nav-link" id="nav-ethics">Responsible AI</a></li>
           <li><a href="#api-specs" class="nav-link" id="nav-api">API Specs</a></li>
         </ul>
@@ -100,6 +99,12 @@
           </button>
 
           <a href="#sandbox" class="btn btn-secondary btn-sm" id="btn-nav-demo">Simulator</a>
+
+          <!-- Sign In Button -->
+          <a href="login.html" class="btn btn-secondary btn-sm" id="btn-nav-signin" style="border-radius:var(--radius-pill); font-weight:600; padding:5px 14px; font-size:0.8rem; border-color:var(--border-strong, rgba(185,138,69,0.4)); color:var(--text-primary);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            <span>Sign In</span>
+          </a>
           
           <!-- Launch Main Web App Button with Rainbow Glow Border -->
           <div class="rainbow-wrapper" style="padding: 1.5px;">
@@ -956,155 +961,6 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           <span>Read Full Track Roadmap (UPDATES_AND_TRACKS.md)</span>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       Auralis - Clean Paper Workflow Pricing Section (neuform-staff-featured-2026-05-22)
-       ========================================================================== -->
-  <section class="auralis-pricing-section" id="pricing">
-    <div class="auralis-container">
-      <div class="auralis-header">
-        <div class="auralis-social-proof">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <span>Loved by 500+ creative teams &bull; 50,000+ migrant families</span>
-        </div>
-
-        <h2 class="auralis-title">
-          Build seamless systems <br>
-          <span>with intelligent precision.</span>
-        </h2>
-
-        <p class="auralis-subtitle">
-          Auralis transforms chaotic remittance corridors and disconnected treasury toolchains into unified, automated workflows. Choose the right plan to optimize transfers and safeguard cross-border capital.
-        </p>
-
-        <!-- Billing Toggle -->
-        <div class="auralis-billing-toggle">
-          <button class="auralis-toggle-btn active" id="btn-billing-monthly" onclick="switchAuralisBilling('monthly')">Monthly Billing</button>
-          <button class="auralis-toggle-btn" id="btn-billing-annual" onclick="switchAuralisBilling('annual')">
-            Annual Billing
-            <span class="auralis-discount-badge">Save 20%</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Plan Comparison Grid -->
-      <div class="auralis-grid">
-        <!-- Plan 1: Family Starter -->
-        <div class="auralis-card">
-          <div class="auralis-plan-name">Family Starter</div>
-          <div class="auralis-plan-desc">Essential intelligence for individual migrant workers and their families in Bangladesh.</div>
-          
-          <div class="auralis-price-block">
-            <span class="auralis-price-val" id="price-starter">$0</span>
-            <span class="auralis-price-period">/ Forever Free</span>
-          </div>
-
-          <ul class="auralis-feature-list">
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>14-day FX corridor forecasting (AED, SAR, MYR, EUR, USD)</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Zero auto-blocking guarantee with transparent reason codes</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Automated Bangla SMS & Voice breakdown for village recipients</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Multi-goal budget allocation (Rent, School, Emergency)</span>
-            </li>
-          </ul>
-
-          <a href="app.html?plan=starter" class="auralis-btn auralis-btn-secondary">
-            <span>Start Free</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Plan 2: Smart Corridor Pro (Featured) -->
-        <div class="auralis-card featured">
-          <div class="auralis-card-pill">Most Popular</div>
-          <div class="auralis-plan-name">Smart Corridor Pro</div>
-          <div class="auralis-plan-desc">Autonomous AI guidance and priority clearing for frequent senders & small business operators.</div>
-          
-          <div class="auralis-price-block">
-            <span class="auralis-price-val" id="price-pro">$19</span>
-            <span class="auralis-price-period" id="period-pro">/ per month</span>
-          </div>
-
-          <ul class="auralis-feature-list">
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>+8.4% Average Payout Gain</strong> with real-time rate lock signals</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>24/7 Grounded AI Copilot</strong> with Bangla and voice translation</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Real-time Isolation Forest AML clearance & identity verification</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Priority village agent cash-out reservations for recipients</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Audit-grade transfer receipts & digital mouza paper records</span>
-            </li>
-          </ul>
-
-          <a href="app.html?plan=pro" class="auralis-btn auralis-btn-primary">
-            <span>Get Started with Pro</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Plan 3: MFS Treasury Enterprise -->
-        <div class="auralis-card">
-          <div class="auralis-plan-name">MFS Treasury Enterprise</div>
-          <div class="auralis-plan-desc">Institutional risk infrastructure, liquidity radar, and automated SAR reporting for fintechs.</div>
-          
-          <div class="auralis-price-block">
-            <span class="auralis-price-val" id="price-enterprise">$99</span>
-            <span class="auralis-price-period" id="period-enterprise">/ per month</span>
-          </div>
-
-          <ul class="auralis-feature-list">
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Full upay Agent Liquidity Radar with district cash-out forecasting</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Automated SAR forensic narrative generation via Gemini 1.5 Pro</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>High-velocity batch transfer API with custom rate limiting</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Zero-knowledge data residency & on-premise model execution</span>
-            </li>
-            <li class="auralis-feature-item">
-              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Dedicated compliance SLA & custom webhook dispatching</span>
-            </li>
-          </ul>
-
-          <a href="app.html?plan=enterprise" class="auralis-btn auralis-btn-secondary">
-            <span>Contact Treasury Sales</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
       </div>
     </div>
   </section>
