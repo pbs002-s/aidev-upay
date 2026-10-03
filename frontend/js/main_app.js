@@ -502,42 +502,49 @@ async function renderAnalystAlerts() {
         container.innerHTML = '';
         serverAlerts.forEach(alert => {
           const card = document.createElement('div');
-          card.className = 'step-card';
+          card.className = 'step-card reg-mark';
+          card.style.paddingTop = '0';
           card.style.marginBottom = '16px';
           card.innerHTML = `
-            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
-              <div>
-                <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--ai-cyan); font-weight:700;">${alert.alert_id} &bull; ${alert.transfer_id}</span>
-                <h4 style="font-size:1.1rem; color:var(--text-primary); margin-top:2px;">${alert.sender_id} &rarr; ${alert.receiver_id}</h4>
-                <span style="font-size:0.82rem; color:var(--text-secondary);">Payout: BDT ${alert.amount_bdt.toLocaleString()}</span>
-              </div>
-              <div style="text-align:right;">
-                <span class="risk-status-badge risk-badge-high">Anomaly Score: ${alert.score}</span>
-                <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">${alert.model_version}</div>
-              </div>
+            <div class="panel-title-block">
+              <span>AML INTERCEPTION // ${alert.alert_id}</span>
+              <span class="mono tnum">${alert.transfer_id}</span>
             </div>
-
-            <div style="margin-bottom:14px;">
-              <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Extracted Anomaly Reasons:</span>
-              <div class="reason-codes-grid">
-                ${(alert.reason_codes || []).map(r => `<span class="reason-tag">${r}</span>`).join('')}
+            <div style="padding-top:14px;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+                <div>
+                  <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--ai-cyan); font-weight:700;">${alert.alert_id} &bull; ${alert.transfer_id}</span>
+                  <h4 style="font-size:1.1rem; color:var(--text-primary); margin-top:2px;">${alert.sender_id} &rarr; ${alert.receiver_id}</h4>
+                  <span style="font-size:0.82rem; color:var(--text-secondary);">Payout: BDT ${alert.amount_bdt.toLocaleString()}</span>
+                </div>
+                <div style="text-align:right;">
+                  <span class="risk-status-badge risk-badge-high">Anomaly Score: ${alert.score}</span>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">${alert.model_version}</div>
+                </div>
               </div>
-            </div>
 
-            <div class="action-buttons-row">
-              <button class="btn btn-secondary btn-sm" onclick="window.openSarModal('${alert.alert_id}', '${alert.transfer_id}', ${alert.score}, ${JSON.stringify(alert.reason_codes || []).replace(/"/g, '&quot;')})">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                <span>Inspect Forensic SAR</span>
-              </button>
-              <button class="btn btn-approve btn-sm" onclick="analystResolve('${alert.alert_id}', 'approve')">
-                <span>Approve & Release</span>
-              </button>
-              <button class="btn btn-hold btn-sm" onclick="analystResolve('${alert.alert_id}', 'hold')">
-                <span>Hold (24h)</span>
-              </button>
-              <button class="btn btn-escalate btn-sm" onclick="analystResolve('${alert.alert_id}', 'escalate')">
-                <span>Escalate</span>
-              </button>
+              <div style="margin-bottom:14px;">
+                <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Extracted Anomaly Reasons:</span>
+                <div class="reason-codes-grid">
+                  ${(alert.reason_codes || []).map(r => `<span class="reason-tag">${r}</span>`).join('')}
+                </div>
+              </div>
+
+              <div class="action-buttons-row">
+                <button class="btn btn-secondary btn-sm" onclick="window.openSarModal('${alert.alert_id}', '${alert.transfer_id}', ${alert.score}, ${JSON.stringify(alert.reason_codes || []).replace(/"/g, '&quot;')})">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  <span>Inspect Forensic SAR</span>
+                </button>
+                <button class="btn btn-approve btn-sm" onclick="analystResolve('${alert.alert_id}', 'approve')">
+                  <span>Approve & Release</span>
+                </button>
+                <button class="btn btn-hold btn-sm" onclick="analystResolve('${alert.alert_id}', 'hold')">
+                  <span>Hold (24h)</span>
+                </button>
+                <button class="btn btn-escalate btn-sm" onclick="analystResolve('${alert.alert_id}', 'escalate')">
+                  <span>Escalate</span>
+                </button>
+              </div>
             </div>
           `;
           container.appendChild(card);
@@ -567,42 +574,49 @@ async function renderAnalystAlerts() {
   container.innerHTML = '';
   flagged.forEach(alert => {
     const card = document.createElement('div');
-    card.className = 'step-card';
+    card.className = 'step-card reg-mark';
+    card.style.paddingTop = '0';
     card.style.marginBottom = '16px';
     card.innerHTML = `
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
-        <div>
-          <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--ai-cyan); font-weight:700;">${alert.id}</span>
-          <h4 style="font-size:1.1rem; color:var(--text-primary); margin-top:2px;">${alert.sender} &rarr; ${alert.receiver}</h4>
-          <span style="font-size:0.82rem; color:var(--text-secondary);">${alert.amountSrc} &bull; Payout: BDT ${alert.amountBDT.toLocaleString()}</span>
-        </div>
-        <div style="text-align:right;">
-          <span class="risk-status-badge risk-badge-high">Anomaly Score: ${alert.score}</span>
-          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">Isolation Forest v1.0</div>
-        </div>
+      <div class="panel-title-block">
+        <span>SUSPICIOUS TRANSACTION // REVIEW CASE</span>
+        <span class="mono tnum">${alert.id}</span>
       </div>
-
-      <div style="margin-bottom:14px;">
-        <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Extracted Anomaly Reasons:</span>
-        <div class="reason-codes-grid">
-          ${alert.reasonCodes.map(r => `<span class="reason-tag">${r}</span>`).join('')}
+      <div style="padding-top:14px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+          <div>
+            <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--ai-cyan); font-weight:700;">${alert.id}</span>
+            <h4 style="font-size:1.1rem; color:var(--text-primary); margin-top:2px;">${alert.sender} &rarr; ${alert.receiver}</h4>
+            <span style="font-size:0.82rem; color:var(--text-secondary);">${alert.amountSrc} &bull; Payout: BDT ${alert.amountBDT.toLocaleString()}</span>
+          </div>
+          <div style="text-align:right;">
+            <span class="risk-status-badge risk-badge-high">Anomaly Score: ${alert.score}</span>
+            <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">Isolation Forest v1.0</div>
+          </div>
         </div>
-      </div>
 
-      <div class="action-buttons-row">
-        <button class="btn btn-secondary btn-sm" onclick="window.openSarModal('${alert.id}', '${alert.id}', ${alert.score}, ${JSON.stringify(alert.reasonCodes).replace(/"/g, '&quot;')})">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          <span>Inspect Forensic SAR</span>
-        </button>
-        <button class="btn btn-approve btn-sm" onclick="analystResolve('${alert.id}', 'approve')">
-          <span>Approve & Release</span>
-        </button>
-        <button class="btn btn-hold btn-sm" onclick="analystResolve('${alert.id}', 'hold')">
-          <span>Hold for 24h</span>
-        </button>
-        <button class="btn btn-escalate btn-sm" onclick="analystResolve('${alert.id}', 'escalate')">
-          <span>Escalate to Crimes Unit</span>
-        </button>
+        <div style="margin-bottom:14px;">
+          <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); text-transform:uppercase;">Extracted Anomaly Reasons:</span>
+          <div class="reason-codes-grid">
+            ${alert.reasonCodes.map(r => `<span class="reason-tag">${r}</span>`).join('')}
+          </div>
+        </div>
+
+        <div class="action-buttons-row">
+          <button class="btn btn-secondary btn-sm" onclick="window.openSarModal('${alert.id}', '${alert.id}', ${alert.score}, ${JSON.stringify(alert.reasonCodes).replace(/"/g, '&quot;')})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Inspect Forensic SAR</span>
+          </button>
+          <button class="btn btn-approve btn-sm" onclick="analystResolve('${alert.id}', 'approve')">
+            <span>Approve & Release</span>
+          </button>
+          <button class="btn btn-hold btn-sm" onclick="analystResolve('${alert.id}', 'hold')">
+            <span>Hold for 24h</span>
+          </button>
+          <button class="btn btn-escalate btn-sm" onclick="analystResolve('${alert.id}', 'escalate')">
+            <span>Escalate to Crimes Unit</span>
+          </button>
+        </div>
       </div>
     `;
     container.appendChild(card);
@@ -934,17 +948,17 @@ function renderLedgerTable() {
   APP_STATE.transfers.forEach(trx => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td style="font-family:var(--font-mono); font-weight:700; color:var(--ai-cyan);">${trx.id}</td>
-      <td style="font-size:0.8rem; color:var(--text-muted);">${trx.date}</td>
+      <td class="mono tnum" style="font-weight:700; color:var(--ai-cyan);">${trx.id}</td>
+      <td class="tnum" style="font-size:0.8rem; color:var(--text-muted);">${trx.date}</td>
       <td><strong>${trx.sender}</strong></td>
       <td>${trx.receiver}</td>
-      <td><strong>${trx.amountSrc}</strong> <span style="font-size:0.75rem; color:var(--text-secondary);">(BDT ${trx.amountBDT.toLocaleString()})</span></td>
+      <td class="tnum"><strong>${trx.amountSrc}</strong> <span style="font-size:0.75rem; color:var(--text-secondary);">(BDT ${trx.amountBDT.toLocaleString()})</span></td>
       <td>
         <span class="badge-status ${trx.status}">
           ${trx.status.replace('_', ' ')}
         </span>
       </td>
-      <td style="font-family:var(--font-mono); font-weight:700; color:${trx.score >= 40 ? 'var(--accent-rose)' : 'var(--upay-emerald-light)'};">
+      <td class="mono tnum" style="font-weight:700; color:${trx.score >= 40 ? 'var(--accent-rose)' : 'var(--upay-emerald-light)'};">
         ${trx.score}/100
       </td>
       <td>
