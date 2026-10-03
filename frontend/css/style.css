@@ -1,47 +1,64 @@
 /* ==========================================================================
-   RemitMind - AI-Powered Remittance Intelligence & Safety Layer for upay
-   Design System: Dignified Official Registry & Voucher Sheet Aesthetics
-   Inspired by Bangladesh Digital Land & Judicial Mouza Sheet (lnd)
-   Palette: Bangladesh Green, Judicial Navy, Warm Gold, Seal Red, Warm Paper
-   Zero Emojis - Vector Iconography - Strict Light/Dark Mode Contrast
+   RemitMind & Auralis - Clean Paper Workflow Design System
+   Specification: neuform-staff-featured-2026-05-22 (Auralis Clean Paper Workflow)
+   Palette: Primary (#B98A45), Secondary (#15171C), Accent (#FFE8B8),
+            Background (#15171C), Surface (#322A1F), Text Primary (#FFFFFF),
+            Text Secondary (#A1A1AA), Border (#322A1F)
+   Typography: Archivo (Display-lg 64px), Instrument Serif (Body-md 16px),
+               IBM Plex Mono (Label-md 12px)
+   Rounded: Card (8px), Control (8px), Pill (9999px)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600;700&family=Anek+Bangla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   /* ============================================================
-     Dark Mode: "Negative Print" (lnd standard)
+     Auralis Clean Paper Workflow Core Palette Tokens
      ============================================================ */
-  --paper: #0C1713;
-  --surface: #13241D;
-  --ground: #0C1713;
-  --ground-sunk: #070E0B;
-  --sheet: #13241D;
-  --sheet-raised: #1A2F26;
+  --auralis-primary: #B98A45;
+  --auralis-secondary: #15171C;
+  --auralis-accent: #FFE8B8;
+  --auralis-background: #15171C;
+  --auralis-surface: #322A1F;
+  --auralis-surface-raised: #3D3325;
+  --auralis-border: #322A1F;
+  --auralis-border-glow: rgba(185, 138, 69, 0.35);
+  --auralis-text-primary: #FFFFFF;
+  --auralis-text-secondary: #A1A1AA;
+  --auralis-text-muted: #71717A;
 
-  --line: #223B30;
-  --line-strong: #335546;
-  --line-hair: #182C24;
+  /* Paper and Surface Mappings */
+  --paper: var(--auralis-background);
+  --surface: var(--auralis-surface);
+  --ground: var(--auralis-background);
+  --ground-sunk: #0E0F12;
+  --sheet: var(--auralis-surface);
+  --sheet-raised: var(--auralis-surface-raised);
 
-  --ink: #E8EFEA;
-  --ink-2: #A3B5AC;
-  --ink-3: #758980;
-  --ink-900: #E8EFEA;
-  --ink-600: #A3B5AC;
-  --ink-300: #758980;
+  --line: var(--auralis-border);
+  --line-strong: rgba(185, 138, 69, 0.35);
+  --line-hair: rgba(255, 232, 184, 0.08);
 
-  /* Official Bangladesh Green */
-  --green-900: #07120D;
+  --ink: var(--auralis-text-primary);
+  --ink-2: var(--auralis-text-secondary);
+  --ink-3: var(--auralis-text-muted);
+  --ink-900: #FFFFFF;
+  --ink-600: #A1A1AA;
+  --ink-300: #71717A;
+
+  /* Warm Auralis Gold & Accent Ochre */
+  --gold-500: var(--auralis-primary);
+  --gold-100: rgba(185, 138, 69, 0.15);
+  --gold-glow: rgba(185, 138, 69, 0.28);
+  --accent-cream: var(--auralis-accent);
+
+  /* Official Bangladesh / upay Emerald & Security Status Accents */
+  --green-900: #0E1A14;
   --green-700: #3DC596;
   --green-500: #52D8A8;
   --green-100: #142F25;
 
-  /* Judicial Navy / Slate */
   --navy-800: #E8EFEA;
-  --gold-500: #E0BC6A;
-  --gold-100: #292415;
-
-  /* Seal Red (alerts, holds) */
   --red-600: #F06A65;
   --red-100: #341817;
 
@@ -50,59 +67,70 @@
   --bg-primary: var(--ground);
   --bg-secondary: var(--sheet);
   --bg-tertiary: var(--sheet-raised);
-  --bg-glass: rgba(19, 36, 29, 0.88);
-  --bg-glass-card: rgba(19, 36, 29, 0.95);
-  --bg-glass-hover: rgba(26, 47, 38, 0.95);
+  --bg-glass: rgba(50, 42, 31, 0.92);
+  --bg-glass-card: rgba(50, 42, 31, 0.96);
+  --bg-glass-hover: rgba(61, 51, 37, 0.96);
 
-  --upay-emerald: var(--green-700);
-  --upay-emerald-glow: rgba(61, 197, 150, 0.2);
-  --upay-emerald-light: var(--green-500);
+  --upay-emerald: var(--auralis-primary);
+  --upay-emerald-glow: var(--gold-glow);
+  --upay-emerald-light: var(--auralis-accent);
 
-  --ai-cyan: #38bdf8;
-  --ai-cyan-glow: rgba(56, 189, 248, 0.2);
-  --ai-indigo: #818cf8;
-  --ai-indigo-glow: rgba(129, 140, 248, 0.2);
-  --ai-violet: #a78bfa;
+  --ai-cyan: #FFE8B8;
+  --ai-cyan-glow: rgba(255, 232, 184, 0.2);
+  --ai-indigo: #C9A24B;
+  --ai-indigo-glow: rgba(185, 138, 69, 0.2);
+  --ai-violet: #D4AF37;
 
-  --accent-amber: var(--gold-500);
-  --accent-amber-glow: rgba(224, 188, 106, 0.2);
+  --accent-amber: var(--auralis-primary);
+  --accent-amber-glow: var(--gold-glow);
   --accent-rose: var(--red-600);
   --accent-rose-glow: rgba(240, 106, 101, 0.2);
-  --upay-gold: var(--gold-500);
+  --upay-gold: var(--auralis-primary);
 
-  --text-primary: var(--ink);
-  --text-secondary: var(--ink-2);
-  --text-muted: var(--ink-3);
-  --text-inverted: #070E0B;
+  --text-primary: var(--auralis-text-primary);
+  --text-secondary: var(--auralis-text-secondary);
+  --text-muted: var(--auralis-text-muted);
+  --text-inverted: #15171C;
 
-  --border-subtle: var(--line);
-  --border-medium: var(--line-strong);
-  --border-active: var(--green-700);
-  --border-cyan: var(--ai-cyan);
+  --border-subtle: var(--auralis-border);
+  --border-medium: rgba(185, 138, 69, 0.25);
+  --border-active: var(--auralis-primary);
+  --border-cyan: var(--auralis-accent);
 
-  /* Elevation & Shape (Precision Drafting: 4-12px, Hairline Shadows) */
+  /* Auralis Radius Tokens (Card 8px, Control 8px, Pill 9999px) */
   --radius-sm: 4px;
   --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-card: 8px;
+  --radius-control: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
   --radius-full: 9999px;
+  --radius-pill: 9999px;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 20px var(--upay-emerald-glow);
-  --shadow-cyan-glow: 0 0 20px var(--ai-cyan-glow);
+  /* Auralis Spacing Tokens (Base 8px, Gap 16px, Card 24px, Section 80px) */
+  --space-base: 8px;
+  --space-gap: 16px;
+  --space-card-padding: 24px;
+  --space-section-padding: 80px;
 
-  /* Typography */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 24px var(--gold-glow);
+  --shadow-cyan-glow: 0 0 24px rgba(255, 232, 184, 0.2);
+
+  /* Auralis Typography Stack */
   --max-width: 1240px;
-  --font-serif: 'Tiro Bangla', Georgia, 'Times New Roman', serif;
-  --font-family: 'Inter', 'Anek Bangla', 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  --font-display: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Instrument Serif', 'Tiro Bangla', Georgia, serif;
+  --font-family: 'Instrument Serif', Georgia, 'Anek Bangla', serif;
+  --font-sans: 'Archivo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --transition-fast: 0.16s ease;
   --transition-normal: 0.28s cubic-bezier(0.22, 0.9, 0.3, 1);
 
-  --grid-line: rgba(34, 59, 48, 0.3);
-  --card-bg-subtle: rgba(19, 36, 29, 0.95);
+  --grid-line: rgba(185, 138, 69, 0.12);
+  --card-bg-subtle: rgba(50, 42, 31, 0.96);
 
   color-scheme: dark;
 }
@@ -582,6 +610,80 @@ h1, h2, h3, h4 {
   background: var(--green-900);
   transform: translateY(-1px);
 }
+
+/* ==========================================================================
+   Rotating Rainbow Border Button Design (shadcn button-ui integration)
+   ========================================================================== */
+@keyframes rotate-rainbow {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.rainbow-wrapper {
+  position: relative;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rainbow-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.25);
+}
+
+.rainbow-wrapper:active {
+  transform: scale(1);
+}
+
+.rainbow-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  filter: blur(6px);
+  background-image: linear-gradient(135deg, #10b981, #06b6d4, #6366f1, #f43f5e, #eab308, #10b981);
+  animation: rotate-rainbow 4s linear infinite;
+}
+
+.rainbow-btn {
+  padding: 10px 24px;
+  font-size: 0.875rem;
+  color: #ffffff !important;
+  border-radius: 9999px;
+  font-weight: 600;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+  text-decoration: none;
+}
+
+.rainbow-btn:hover {
+  background: rgba(15, 23, 42, 0.72);
+}
+
 
 .btn-sm {
   padding: 5px 12px;
@@ -1694,3 +1796,295 @@ h1, h2, h3, h4 {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
+
+/* ==========================================================================
+   Auralis - Clean Paper Workflow Pricing Section (neuform-staff-featured-2026-05-22)
+   ========================================================================== */
+.auralis-pricing-section {
+  padding: var(--space-section-padding, 80px) 0;
+  background: var(--auralis-background, #15171C);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Atmospheric Subtle WebGL-like Glow Layer */
+.auralis-pricing-section::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 480px;
+  background: radial-gradient(ellipse at center, rgba(185, 138, 69, 0.14) 0%, rgba(255, 232, 184, 0.04) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+.auralis-container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width, 1240px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.auralis-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 56px auto;
+}
+
+.auralis-social-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(185, 138, 69, 0.12);
+  border: 1px solid rgba(185, 138, 69, 0.3);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill, 9999px);
+  color: var(--auralis-accent, #FFE8B8);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.auralis-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: 0;
+  color: var(--auralis-text-primary, #FFFFFF);
+  margin-bottom: 18px;
+}
+
+.auralis-title span {
+  color: var(--auralis-primary, #B98A45);
+}
+
+.auralis-subtitle {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--auralis-text-secondary, #A1A1AA);
+  max-width: 660px;
+  margin: 0 auto 32px auto;
+}
+
+/* Billing Cycle Toggle (Pill Control) */
+.auralis-billing-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--auralis-surface, #322A1F);
+  border: 1px solid rgba(185, 138, 69, 0.25);
+  padding: 4px;
+  border-radius: var(--radius-pill, 9999px);
+  gap: 4px;
+}
+
+.auralis-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--auralis-text-secondary, #A1A1AA);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auralis-toggle-btn.active {
+  background: var(--auralis-primary, #B98A45);
+  color: #15171C;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.auralis-discount-badge {
+  background: var(--auralis-accent, #FFE8B8);
+  color: #15171C;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-left: 6px;
+}
+
+/* Pricing Grid */
+.auralis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-gap, 16px);
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .auralis-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+/* Plan Card */
+.auralis-card {
+  background: var(--auralis-surface, #322A1F);
+  border: 1px solid var(--auralis-border, #322A1F);
+  border-radius: var(--radius-card, 8px);
+  padding: var(--space-card-padding, 24px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.auralis-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(185, 138, 69, 0.45);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Featured Plan Card (Pro) */
+.auralis-card.featured {
+  border-color: var(--auralis-primary, #B98A45);
+  background: linear-gradient(180deg, #382F23 0%, var(--auralis-surface, #322A1F) 100%);
+  box-shadow: 0 0 35px rgba(185, 138, 69, 0.22);
+}
+
+.auralis-card-pill {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: var(--auralis-primary, #B98A45);
+  color: #15171C;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 9999px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.auralis-plan-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--auralis-text-primary, #FFFFFF);
+  margin-bottom: 6px;
+}
+
+.auralis-plan-desc {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--auralis-text-secondary, #A1A1AA);
+  min-height: 48px;
+  margin-bottom: 24px;
+}
+
+.auralis-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(185, 138, 69, 0.2);
+  margin-bottom: 24px;
+}
+
+.auralis-price-val {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--auralis-accent, #FFE8B8);
+  line-height: 1;
+}
+
+.auralis-price-period {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--auralis-text-secondary, #A1A1AA);
+  text-transform: uppercase;
+}
+
+/* Feature List */
+.auralis-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.auralis-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  color: var(--auralis-text-primary, #FFFFFF);
+  line-height: 1.4;
+}
+
+.auralis-check-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--auralis-primary, #B98A45);
+  margin-top: 1px;
+}
+
+/* Conversion Button */
+.auralis-btn {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: var(--radius-control, 8px);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.auralis-btn-primary {
+  background: var(--auralis-primary, #B98A45);
+  color: #15171C !important;
+  box-shadow: 0 4px 14px rgba(185, 138, 69, 0.3);
+}
+
+.auralis-btn-primary:hover {
+  background: var(--auralis-accent, #FFE8B8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(185, 138, 69, 0.45);
+}
+
+.auralis-btn-secondary {
+  background: transparent;
+  color: var(--auralis-accent, #FFE8B8) !important;
+  border-color: rgba(185, 138, 69, 0.4);
+}
+
+.auralis-btn-secondary:hover {
+  background: rgba(185, 138, 69, 0.12);
+  border-color: var(--auralis-primary, #B98A45);
+  color: #FFFFFF !important;
+}
+

@@ -6,10 +6,10 @@
   <title>RemitMind Portal | International Remittance & AI Intelligence</title>
   <meta name="description" content="RemitMind production workspace for international remittance payment execution, real-time risk operations, village receiver budgeting, and agent liquidity forecasting.">
 
-  <!-- Google Fonts: Anek Bangla, Inter, JetBrains Mono, Noto Sans Bengali, Tiro Bangla (from lnd Mouza Sheet design) -->
+  <!-- Google Fonts: Archivo (Display), Instrument Serif (Body), IBM Plex Mono (Labels), Anek Bangla, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600;700&family=Anek+Bangla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
@@ -313,11 +313,13 @@
                 </label>
               </div>
 
-              <!-- Submit Button -->
-              <button class="btn btn-glow btn-lg" id="btn-submit-payment" style="width:100%; margin-top:24px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>Authorize Payment of <span id="btn-pay-total-amount">2,000 AED</span></span>
-              </button>
+              <!-- Submit Button with Rotating Rainbow Glow Border -->
+              <div class="rainbow-wrapper" style="width:100%; margin-top:24px; padding:2px; border-radius:10px;">
+                <button class="rainbow-btn" id="btn-submit-payment" style="width:100%; border-radius:8px; justify-content:center; padding:14px 20px; font-size:0.95rem;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>Authorize Payment of <span id="btn-pay-total-amount">2,000 AED</span></span>
+                </button>
+              </div>
             </div>
           </div>
 

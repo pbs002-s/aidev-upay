@@ -611,3 +611,34 @@ function showToast(msg) {
     toast.style.display = 'none';
   }, 4000);
 }
+
+/* ==========================================================================
+   8. Auralis Clean Pricing Billing Switcher
+   ========================================================================== */
+window.switchAuralisBilling = function(cycle) {
+  const mBtn = document.getElementById('btn-billing-monthly');
+  const aBtn = document.getElementById('btn-billing-annual');
+  const pPro = document.getElementById('price-pro');
+  const pEnt = document.getElementById('price-enterprise');
+  const perPro = document.getElementById('period-pro');
+  const perEnt = document.getElementById('period-enterprise');
+
+  if (cycle === 'annual') {
+    if (mBtn) mBtn.classList.remove('active');
+    if (aBtn) aBtn.classList.add('active');
+    if (pPro) pPro.innerText = '$15';
+    if (pEnt) pEnt.innerText = '$79';
+    if (perPro) perPro.innerText = '/ month (billed yearly)';
+    if (perEnt) perEnt.innerText = '/ month (billed yearly)';
+    showToast('Switched to Annual Billing (20% discount applied!)');
+  } else {
+    if (aBtn) aBtn.classList.remove('active');
+    if (mBtn) mBtn.classList.add('active');
+    if (pPro) pPro.innerText = '$19';
+    if (pEnt) pEnt.innerText = '$99';
+    if (perPro) perPro.innerText = '/ per month';
+    if (perEnt) perEnt.innerText = '/ per month';
+    showToast('Switched to Monthly Billing');
+  }
+};
+

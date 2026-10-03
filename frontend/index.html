@@ -6,10 +6,10 @@
   <title>RemitMind | AI-Powered Remittance Intelligence & Safety Layer for upay</title>
   <meta name="description" content="RemitMind empowers Bangladeshi migrant workers and upay with AI send-plan recommendations, international payments, explainable fraud detection with zero auto-blocks, plain Bangla summaries, and agent liquidity forecasting.">
   
-  <!-- Google Fonts: Anek Bangla, Inter, JetBrains Mono, Noto Sans Bengali, Tiro Bangla (from lnd Mouza Sheet design) -->
+  <!-- Google Fonts: Archivo (Display), Instrument Serif (Body), IBM Plex Mono (Labels), Anek Bangla, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600;700&family=Anek+Bangla:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -68,6 +68,7 @@
           <li><a href="#sandbox" class="nav-link" id="nav-sandbox">Live AI Sandbox</a></li>
           <li><a href="#engines" class="nav-link" id="nav-engines">The 4 Engines</a></li>
           <li><a href="#benchmarks" class="nav-link" id="nav-benchmarks">Benchmarks & Tracks</a></li>
+          <li><a href="#pricing" class="nav-link" id="nav-pricing">Pricing & Plans</a></li>
           <li><a href="#responsible-ai" class="nav-link" id="nav-ethics">Responsible AI</a></li>
           <li><a href="#api-specs" class="nav-link" id="nav-api">API Specs</a></li>
         </ul>
@@ -100,11 +101,13 @@
 
           <a href="#sandbox" class="btn btn-secondary btn-sm" id="btn-nav-demo">Simulator</a>
           
-          <!-- Launch Main Web App Button -->
-          <a href="app.html" class="btn btn-glow btn-sm" id="btn-nav-open-app">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            <span>Launch Web App</span>
-          </a>
+          <!-- Launch Main Web App Button with Rainbow Glow Border -->
+          <div class="rainbow-wrapper" style="padding: 1.5px;">
+            <a href="app.html" class="rainbow-btn" style="padding: 5px 14px; font-size: 0.78rem;" id="btn-nav-open-app">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>Launch Web App</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -114,25 +117,28 @@
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-pill" id="hero-badge">
-        <span class="pulse-dot"></span>
-        <span>RemitMind AI 2.0 &bull; Intelligent Remittance & Fraud Defense for upay</span>
+        <span class="pulse-dot" style="background:var(--auralis-primary, #B98A45); box-shadow:0 0 10px var(--auralis-primary, #B98A45);"></span>
+        <span>Auralis &bull; Loved by 500+ teams &bull; 50,000+ migrant heroes</span>
       </div>
 
-      <h1 class="hero-title sheet-title" id="main-heading">
-        Smarter Transfers for Migrant Heroes. <br>
-        <span class="text-gradient-emerald">Zero Blindspots for upay.</span>
+      <h1 class="hero-title" id="main-heading">
+        Build seamless systems <br>
+        <span class="text-gradient-auralis">with intelligent precision.</span>
       </h1>
 
       <p class="hero-subtitle" id="hero-description">
-        For Bangladeshi migrant workers worldwide, poorly timed transfers waste hard-earned money while fraud rings exploit transaction blindspots. RemitMind combines rate forecasting, goal-based budgeting, explainable anomaly detection, and agent liquidity intelligence into one platform.
+        Auralis transforms chaotic remittance corridors and disconnected treasury toolchains into unified, automated workflows. Powered by real-time ML anomaly defense, 14-day FX forecasting, and explainable safety operations for upay Bangladesh.
       </p>
 
       <div class="hero-cta-group">
-        <!-- Prominent Launch App Button -->
-        <a href="app.html" class="btn btn-glow btn-lg" id="btn-hero-launch-app">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          <span>Open Full Web App &bull; International Pay</span>
-        </a>
+        <!-- Prominent Launch App Button with Rotating Rainbow Glow Border -->
+        <div class="rainbow-wrapper" id="btn-hero-launch-app-wrapper">
+          <a href="app.html" class="rainbow-btn" id="btn-hero-launch-app">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            <span>Open Full Web App &bull; International Pay</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
 
         <a href="#sandbox" class="btn btn-secondary btn-lg" id="btn-hero-simulator">
           <span>Try Interactive Sandbox</span>
@@ -950,6 +956,155 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           <span>Read Full Track Roadmap (UPDATES_AND_TRACKS.md)</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Auralis - Clean Paper Workflow Pricing Section (neuform-staff-featured-2026-05-22)
+       ========================================================================== -->
+  <section class="auralis-pricing-section" id="pricing">
+    <div class="auralis-container">
+      <div class="auralis-header">
+        <div class="auralis-social-proof">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Loved by 500+ creative teams &bull; 50,000+ migrant families</span>
+        </div>
+
+        <h2 class="auralis-title">
+          Build seamless systems <br>
+          <span>with intelligent precision.</span>
+        </h2>
+
+        <p class="auralis-subtitle">
+          Auralis transforms chaotic remittance corridors and disconnected treasury toolchains into unified, automated workflows. Choose the right plan to optimize transfers and safeguard cross-border capital.
+        </p>
+
+        <!-- Billing Toggle -->
+        <div class="auralis-billing-toggle">
+          <button class="auralis-toggle-btn active" id="btn-billing-monthly" onclick="switchAuralisBilling('monthly')">Monthly Billing</button>
+          <button class="auralis-toggle-btn" id="btn-billing-annual" onclick="switchAuralisBilling('annual')">
+            Annual Billing
+            <span class="auralis-discount-badge">Save 20%</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Plan Comparison Grid -->
+      <div class="auralis-grid">
+        <!-- Plan 1: Family Starter -->
+        <div class="auralis-card">
+          <div class="auralis-plan-name">Family Starter</div>
+          <div class="auralis-plan-desc">Essential intelligence for individual migrant workers and their families in Bangladesh.</div>
+          
+          <div class="auralis-price-block">
+            <span class="auralis-price-val" id="price-starter">$0</span>
+            <span class="auralis-price-period">/ Forever Free</span>
+          </div>
+
+          <ul class="auralis-feature-list">
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>14-day FX corridor forecasting (AED, SAR, MYR, EUR, USD)</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero auto-blocking guarantee with transparent reason codes</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Automated Bangla SMS & Voice breakdown for village recipients</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Multi-goal budget allocation (Rent, School, Emergency)</span>
+            </li>
+          </ul>
+
+          <a href="app.html?plan=starter" class="auralis-btn auralis-btn-secondary">
+            <span>Start Free</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Plan 2: Smart Corridor Pro (Featured) -->
+        <div class="auralis-card featured">
+          <div class="auralis-card-pill">Most Popular</div>
+          <div class="auralis-plan-name">Smart Corridor Pro</div>
+          <div class="auralis-plan-desc">Autonomous AI guidance and priority clearing for frequent senders & small business operators.</div>
+          
+          <div class="auralis-price-block">
+            <span class="auralis-price-val" id="price-pro">$19</span>
+            <span class="auralis-price-period" id="period-pro">/ per month</span>
+          </div>
+
+          <ul class="auralis-feature-list">
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>+8.4% Average Payout Gain</strong> with real-time rate lock signals</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>24/7 Grounded AI Copilot</strong> with Bangla and voice translation</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Real-time Isolation Forest AML clearance & identity verification</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Priority village agent cash-out reservations for recipients</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Audit-grade transfer receipts & digital mouza paper records</span>
+            </li>
+          </ul>
+
+          <a href="app.html?plan=pro" class="auralis-btn auralis-btn-primary">
+            <span>Get Started with Pro</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Plan 3: MFS Treasury Enterprise -->
+        <div class="auralis-card">
+          <div class="auralis-plan-name">MFS Treasury Enterprise</div>
+          <div class="auralis-plan-desc">Institutional risk infrastructure, liquidity radar, and automated SAR reporting for fintechs.</div>
+          
+          <div class="auralis-price-block">
+            <span class="auralis-price-val" id="price-enterprise">$99</span>
+            <span class="auralis-price-period" id="period-enterprise">/ per month</span>
+          </div>
+
+          <ul class="auralis-feature-list">
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Full upay Agent Liquidity Radar with district cash-out forecasting</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Automated SAR forensic narrative generation via Gemini 1.5 Pro</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>High-velocity batch transfer API with custom rate limiting</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero-knowledge data residency & on-premise model execution</span>
+            </li>
+            <li class="auralis-feature-item">
+              <svg class="auralis-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Dedicated compliance SLA & custom webhook dispatching</span>
+            </li>
+          </ul>
+
+          <a href="app.html?plan=enterprise" class="auralis-btn auralis-btn-secondary">
+            <span>Contact Treasury Sales</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
